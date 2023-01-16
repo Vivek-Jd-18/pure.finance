@@ -1,0 +1,22 @@
+0 silly argv {
+0 silly argv   _: [ 'run' ],
+0 silly argv   stream: true,
+0 silly argv   lernaVersion: '4.0.0',
+0 silly argv   '$0': 'node_modules\\lerna\\cli.js',
+0 silly argv   script: 'dev'
+0 silly argv }
+1 notice cli v4.0.0
+2 verbose rootPath C:\Users\Vhits\OneDrive\Desktop\projects\pureFinance\pure.finance
+3 error JSONError: Unexpected token "}" (0x7D) in JSON at position 631 while parsing near "...-scripts start\",\r\n  },\r\n  \"dependencies\"..." in site\package.json
+3 error
+3 error [0m [90m 11 | [39m    [32m"start"[39m[33m:[39m [32m"next start"[39m[33m,[39m[0m
+3 error [0m [90m 12 | [39m    [32m"start"[39m[33m:[39m [32m"react-scripts start"[39m[33m,[39m[0m
+3 error [0m[31m[1m>[22m[39m[90m 13 | [39m  }[33m,[39m[0m
+3 error [0m [90m    | [39m  [31m[1m^[22m[39m[0m
+3 error [0m [90m 14 | [39m  [32m"dependencies"[39m[33m:[39m {[0m
+3 error [0m [90m 15 | [39m    [32m"@uniswap/default-token-list"[39m[33m:[39m [32m"2.1.0"[39m[33m,[39m[0m
+3 error [0m [90m 16 | [39m    [32m"@web3-react/core"[39m[33m:[39m [32m"6.1.9"[39m[33m,[39m[0m
+3 error
+3 error     at parseJson (C:\Users\Vhits\OneDrive\Desktop\projects\pureFinance\pure.finance\node_modules\parse-json\index.js:29:21)
+3 error     at parse (C:\Users\Vhits\OneDrive\Desktop\projects\pureFinance\pure.finance\node_modules\load-json-file\index.js:15:9)
+3 error     at module.exports (C:\Users\Vhits\OneDrive\Desktop\projects\pureFinance\pure.finance\node_modules\load-json-file\index.js:18:47)

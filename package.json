@@ -1,0 +1,96 @@
+{
+  "name": "pure-finance",
+  "version": "1.0.0",
+  "license": "MIT",
+  "author": "Gabriel Montes",
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
+  "devDependencies": {
+    "@types/mocha": "^9.0.0",
+    "chai": "^4.3.4",
+    "dependency-check": "^4.1.0",
+    "eslint": "^7.29.0",
+    "eslint-config-bloq": "^3.0.0",
+    "husky": "^4.3.8",
+    "lerna": "^4.0.0",
+    "lint-staged": "^10.5.4",
+    "mocha": "^9.0.3",
+    "next": "^11.0.1",
+    "nyc": "^15.1.0",
+    "precinct": "^8.1.0",
+    "prettier": "^2.3.1",
+    "prettier-plugin-tailwind": "^2.2.12",
+    "tailwindcss": "^2.2.7"
+  },
+  "eslintConfig": {
+    "extends": [
+      "bloq",
+      "prettier"
+    ],
+    "ignorePatterns": [
+      "site/out"
+    ],
+    "overrides": [
+      {
+        "files": [
+          "packages/**/*.js"
+        ],
+        "extends": [
+          "bloq/node",
+          "prettier"
+        ]
+      },
+      {
+        "files": [
+          "*.spec.js"
+        ],
+        "extends": [
+          "bloq/mocha",
+          "prettier"
+        ]
+      },
+      {
+        "files": [
+          "site/**/*.js"
+        ],
+        "extends": [
+          "bloq/next",
+          "prettier"
+        ],
+        "rules": {
+          "@next/next/no-html-link-for-pages": [
+            "warn",
+            "site/pages"
+          ]
+        }
+      }
+    ],
+    "rules": {
+      "promise/no-nesting": "off"
+    }
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged",
+      "pre-push": "npm run test && npm run deps:check"
+    }
+  },
+  "lint-staged": {
+    "*.js": "eslint --cache --fix",
+    "*.{css,js,json,md}": "prettier --write"
+  },
+  "prettier": {
+    "arrowParens": "avoid",
+    "semi": false,
+    "singleQuote": true,
+    "tabWidth": 2,
+    "trailingComma": "none"
+  },
+  "dependencies": {
+    "react-scripts": "^5.0.1"
+  }
+}
